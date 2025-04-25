@@ -1,0 +1,140 @@
+@use '../assets/mixin.scss' as *;
+@use '../assets/variablesSCSS.scss' as *;
+
+.about {
+   &__container {}
+
+   &__body {
+      @media (min-width:1024px) {
+         display: flex;
+         align-items: flex-start;
+         gap: 100px;
+
+         @include size_adaptive (gap, 20, 100, 1024, $max-width-content);
+      }
+   }
+
+   &__swiper {
+      margin-bottom: 50px;
+      margin-left: calc(var(--offset-content)* -1);
+      margin-right: calc(var(--offset-content)* -1);
+
+      overflow: hidden;
+
+      @include size_adaptive_flex (0, 0, 500, 830, 1024, $max-width-content);
+
+      @media (min-width:1024px) {
+         margin-bottom: 0;
+         margin-right: 0;
+      }
+
+      @media (min-width:$max-width-content) {
+         flex: 0 0 830px;
+      }
+   }
+
+   &__swiper-slide {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-bottom: 80%;
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__swiper-nav {
+      display: none;
+      margin-top: 50px;
+      justify-content: center;
+      gap: 40px;
+
+      @media (min-width:1024px) {
+         display: flex;
+      }
+   }
+
+   &__content {}
+
+   &__text {
+      margin-bottom: 64px;
+   }
+
+   &__button {
+      margin-bottom: 58px;
+
+      @media (min-width:1024px) {
+         margin-bottom: 142px;
+      }
+   }
+
+   &__argument {
+      margin-bottom: 18px;
+      padding-top: 20px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 125%;
+      text-transform: uppercase;
+      color: var(--color-orange);
+      border-top: 1px solid var(--color-orange);
+
+      @media (min-width:1024px) {
+         margin-bottom: 100px;
+         font-size: 34px;
+      }
+   }
+
+   &__animal {
+      margin-top: 32px;
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @media (min-width:1024px) {
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+   }
+
+   &__animal-img {
+      --size: 110px;
+      flex: 0 0 var(--size);
+      height: var(--size);
+      border-radius: 50%;
+
+      @include size_adaptive (--size, 110, 230, 1024, $max-width-content);
+
+      @media (min-width:$max-width-content) {
+         --size: 230px;
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+
+   &__animal-text {
+      margin-right: -20px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 112%;
+      text-transform: uppercase;
+      color: var(--color-white);
+
+      @media (min-width:768px) {
+         font-size: 24px;
+      }
+
+      @media (min-width:1200px) {
+         font-size: 34px;
+      }
+   }
+}

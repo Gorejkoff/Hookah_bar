@@ -1,0 +1,14 @@
+//  отступы по бокам контейнера 
+$padding-mobile: 32px;
+$padding-tablet: 32px;
+$padding-desktop: 32px;
+//  максимальный размер контента в контейнере 
+$width-content: 1420px;
+//  максимальный размер контейнера с отступами 
+$max-width-container: $padding-desktop * 2 + $width-content;
+$max-padding-content: 250px;
+$max-width-content: $width-content + $max-padding-content * 2;
+//  transition time 
+$tr-time: .3s;
+$tr-time-l: .7s;
+$bezier: cubic-bezier(.6, -0.01, .24, 1);

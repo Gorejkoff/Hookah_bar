@@ -1,0 +1,66 @@
+@use '../assets/variablesSCSS.scss' as *;
+
+.footer {
+   font-family: var(--font-family-second);
+   font-size: 14px;
+
+   @media (min-width:1024px) {
+      font-size: 24px;
+   }
+
+   &__container {}
+
+   &__body {
+      padding: 38px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (min-width:1024px) {
+         padding: 50px 0;
+      }
+   }
+
+   &__nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @media (min-width:1024px) {
+         gap: 55px;
+      }
+   }
+
+   &__link {
+      font-weight: 700;
+      line-height: 100%;
+      text-decoration: underline;
+      // text-decoration-skip-ink: none;
+      color: var(--color-white);
+   }
+
+   &__button {
+      padding: 10px 8px;
+      --button-height: auto;
+      width: auto;
+      font-size: inherit;
+
+      @media (min-width:1024px) {
+         padding: 12px;
+      }
+   }
+
+   &__copyright {
+      font-weight: 700;
+      line-height: 100%;
+      text-align: right;
+
+      span {
+         display: none;
+
+         @media (min-width:1024px) {
+            display: inline;
+         }
+      }
+   }
+}

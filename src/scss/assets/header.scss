@@ -1,0 +1,103 @@
+@use '../assets/variablesSCSS.scss' as *;
+
+
+.header {
+   font-family: var(--font-family-second);
+   padding: 28px 0;
+
+   @media (min-width:1024px) {
+      padding: 58px 0;
+   }
+
+   &__container {}
+
+   &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 59px;
+
+      @media (min-width:1024px) {
+         justify-content: center;
+
+      }
+   }
+
+   &__flank {
+      display: none;
+
+      @media (min-width:1024px) {
+         display: block;
+      }
+
+      ol {
+         display: flex;
+         align-items: center;
+         gap: 59px;
+
+         li {
+            list-style: none;
+         }
+      }
+   }
+
+   &__logo {
+      position: relative;
+      z-index: 2;
+
+      @media (min-width:1024px) {
+         transform: translateY(20vh);
+         animation: logo 2s 2s forwards;
+      }
+
+      img,
+      svg {
+         width: 50px;
+         height: auto;
+
+         @media (min-width:1024px) {
+            width: 100px;
+         }
+      }
+   }
+
+   &__logo-around {
+      transform-origin: 50% 50%;
+
+      @media (min-width:1024px) {
+         transform: rotate(180deg);
+         animation: around 1s 1s forwards;
+      }
+   }
+
+   &__buttom-menu {
+      @media (min-width:1024px) {
+         display: none;
+      }
+   }
+
+   &__telegram {
+      min-width: 29px;
+   }
+}
+
+
+@keyframes logo {
+   0% {
+      transform: translateY(20vh);
+   }
+
+   100% {
+      transform: translateY(0);
+   }
+}
+
+@keyframes around {
+   0% {
+      transform: rotate(180deg);
+   }
+
+   100% {
+      transform: rotate(0);
+   }
+}

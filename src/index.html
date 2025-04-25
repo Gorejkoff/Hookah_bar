@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   @@include('html/1_head.html',{"title":"Hookah Bar"})
+</head>
+
+
+<body>
+
+   <div id="scroll">
+      <div id="content">
+
+
+         <div class="wrapper">
+
+            @@include('html/First-Screen/First-Screen.html',{})
+
+            <main class="main">
+
+               <img class="background-smoke" src="@img/png/smoke.png" alt="дым" aria-hidden="true">
+
+               <section class="block">
+                  <div class="block__container">
+                     <div class="block__body">
+                        <div class="block__images js-trigger-1">
+                           <img class="block__images-1" src="@img/jpg/img-2.jpg" alt="камин и стол">
+                           <img class="block__images-2" src="@img/jpg/img-3.jpg" alt="статуэтка совы">
+                        </div>
+                        <div class="block__content">
+                           <h2 class="title">Алмосфера <br>Которая завораживает</h2>
+                           <p class="block__text text">Переступив порог, вы окажетесь в мире мягкого света, изящных деталей интерьера и спокойной гармонии. Уютные диваны, приглушённое освещение и тонкие ароматы создают идеальную обстановку для отдыха и неспешных бесед.</p>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               <section class="block">
+                  <div class="block__container">
+                     <div class="block__body">
+                        <div class="block__images js-trigger-2">
+                           <img class="block__images-3" src="@img/png/image-4.png" alt="искры от углей">
+                           <img class="block__images-4" src="@img/jpg/img-4.jpg" alt="кальяны">
+                           <img class="block__images-5" src="@img/jpg/img-5.jpg" alt="угли">
+                        </div>
+                        <div class="block__content center ">
+                           <h2 class="title">Искусство кальяна</h2>
+                           <p class="block__text text reduce-width-1">Вас ждёт широкий выбор премиальных табаков: <br>от классических сочетаний до редких эксклюзивных миксов, приготовленных с особым вниманием к деталям.</p>
+                           <div class="block__list text reduce-width-1">
+                              <span class="block__list-title">Всегда в наличии:</span>
+                              <ol>
+                                 <li>Musthave</li>
+                                 <li>Darkside</li>
+                                 <li>Black Burn</li>
+                                 <li>Darkside Xperience</li>
+                                 <li>Darkside Sabotage</li>
+                                 <li>Trofimov</li>
+                                 <li>Starline Bonche</li>
+                                 <li>Tangiers</li>
+                              </ol>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               <section class="block">
+                  <div class="block__container">
+                     <div class="block__body">
+                        <div class="block__images js-trigger-3">
+                           <img class="block__images-7" src="@img/png/image-1.png" alt="сухофрукты">
+                           <img class="block__images-8" src="@img/png/image-2.png" alt="сладости">
+                           <img class="block__images-6" src="@img/png/image-3.png" alt="чай в прозрачном заварнике">
+                        </div>
+                        <div class="block__content center">
+                           <h2 class="title">Дополнение <br>к удовольствию</h2>
+                           <p class="block__text text reduce-width-2">Чтобы сделать ваш отдых ещё приятнее, мы предлагаем ароматные чаи, изысканные напитки и лёгкие закуски, которые идеально дополняют кальянный ритуал. А приглушённая музыка и уютные вечера добавляют особый шарм каждому визиту.</p>
+                           <button type="button" class="button js-modal-open" data-modal_open="bar-card">
+                              <span class="button__icon">
+                                 <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M29.084 7.49561C29.084 16.0582 22.8009 22.9988 15.042 22.9988C7.28311 22.9988 1 16.0582 1 7.49561C1 11.0828 7.28311 13.9906 15.042 13.9906C22.8009 13.9906 29.084 11.0828 29.084 7.49561Z" stroke="white" stroke-miterlimit="10" />
+                                    <path d="M15.042 13.9909C22.7972 13.9909 29.084 11.083 29.084 7.49595C29.084 3.90888 22.7972 1.00098 15.042 1.00098C7.28682 1.00098 1 3.90888 1 7.49595C1 11.083 7.28682 13.9909 15.042 13.9909Z" stroke="white" stroke-miterlimit="10" />
+                                    <path d="M2.25662 10.1846C3.11872 7.27686 8.5105 5.03394 15.042 5.03394C21.5735 5.03394 26.9653 7.27686 27.8274 10.1846" stroke="white" stroke-miterlimit="10" />
+                                    <path d="M28.9087 9.92871C34.4393 9.92871 32.737 16.6648 26.3589 16.6648" stroke="white" stroke-miterlimit="10" />
+                                 </svg>
+                              </span>
+                              <span>Меню</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+
+               @@include('html/About/About.html',{})
+
+               @@include('html/Contact/Contact.html',{})
+
+            </main>
+
+            @@include('html/4_footer.html',{})
+
+         </div>
+      </div>
+   </div>
+
+
+   @@include('html/Modal/bar-card.html',{})
+
+   @@include('html/3_scripts.html',{
+   swiper: true,
+   })
+
+
+</body>
+
+</html>
