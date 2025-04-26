@@ -59,6 +59,16 @@
                                  <li>Tangiers</li>
                               </ol>
                            </div>
+                           <button type="button" class="button desktop-hidden js-modal-open" data-modal_open="hookah-card">
+                              <span class="button__icon">
+                                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.3804 15.1597H0.5V26.8091H12.3804V15.1597Z" stroke="white" stroke-miterlimit="10" />
+                                    <path d="M27.5 15.1597H15.6196V26.8091H27.5V15.1597Z" stroke="white" stroke-miterlimit="10" />
+                                    <path d="M19.5313 1.19141H7.65088V12.8409H19.5313V1.19141Z" stroke="white" stroke-miterlimit="10" />
+                                 </svg>
+                              </span>
+                              <span>Кальянная карта</span>
+                           </button>
                         </div>
                      </div>
                   </div>
@@ -103,8 +113,13 @@
       </div>
    </div>
 
+   <script>
+      if (history.scrollRestoration) { history.scrollRestoration = "manual" }
+   </script>
 
    @@include('html/Modal/bar-card.html',{})
+   @@include('html/Modal/hookah-card.html',{})
+   @@include('html/Modal/rules.html',{})
 
    @@include('html/3_scripts.html',{
    swiper: true,

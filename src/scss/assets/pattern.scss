@@ -130,6 +130,12 @@ body {
    pointer-events: none;
 }
 
+.desktop-hidden {
+   @media (min-width:1024px) {
+      display: none;
+   }
+}
+
 // .hidden-max1024 {
 //    @media (max-width:1023.98px) {
 //       display: none !important;
@@ -218,8 +224,21 @@ body {
 }
 
 .swiper-button {
-   opacity: 0.3;
-   transition: opacity 0.3;
+   width: 43px;
+
+   ._pc & {
+      opacity: 0.3;
+      transition: opacity 0.3;
+   }
+
+   @media (min-width:1024px) {
+      width: 83px;
+   }
+
+   svg {
+      width: 100%;
+      height: auto;
+   }
 
    &:hover {
       opacity: 1;
