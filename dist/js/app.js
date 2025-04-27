@@ -132,10 +132,10 @@ window.addEventListener("load", (event) => {
    const smoother = ScrollSmoother.create({
       wrapper: "#scroll",
       content: "#content",
-      smooth: 3,
+      smooth: 2,
       // smoothTouch: true,
       // effects: true,
-      // normalizeScroll: true
+      normalizeScroll: true
    })
    if (MIN1024.matches) {
       smoother.paused(true);
@@ -271,4 +271,32 @@ function activeScrollCloseModal() {
    if (!document.querySelector('.js-modal-visible')) {
       document.body.classList.remove('body-overflow');
    }
+}
+
+
+if (document.querySelector('.about__swiper')) {
+   const swiper = new Swiper('.about__swiper', {
+      keyboard: {
+         enabled: true,
+         onlyInViewport: true,
+      },
+      spaceBetween: 10,
+      // allowTouchMove: true,
+      speed: 300,
+      slidesPerView: 1.2,
+      grabCursor: true,
+      navigation: {
+         nextEl: ".about__swiper-button-next",
+         prevEl: ".about__swiper-button-prev",
+      },
+      breakpoints: {
+         768: {
+            slidesPerView: 1
+         },
+      },
+
+
+
+
+   });
 }

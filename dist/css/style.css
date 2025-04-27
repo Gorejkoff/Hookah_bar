@@ -966,6 +966,8 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 
 .about__swiper-nav {

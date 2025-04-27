@@ -6582,29 +6582,6 @@ var Swiper = function () {
 //# sourceMappingURL=swiper-bundle.min.js.map
 
 
-
-
-
-if (document.querySelector('.about__swiper')) {
-   const swiper = new Swiper('.about__swiper', {
-      spaceBetween: 10,
-      speed: 300,
-      slidesPerView: 1.2,
-      grabCursor: true,
-      breakpoints: {
-         768: {
-            slidesPerView: 1
-         },
-      },
-      navigation: {
-         nextEl: ".about__swiper-button-next",
-         prevEl: ".about__swiper-button-prev",
-      },
-
-
-
-   });
-}
 /* пример инициализации слайдера */
 // if (document.querySelector('.swiper')) {
 //    const swiper = new Swiper('.swiper', {

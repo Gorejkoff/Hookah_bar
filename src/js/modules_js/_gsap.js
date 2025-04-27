@@ -8,10 +8,10 @@ window.addEventListener("load", (event) => {
    const smoother = ScrollSmoother.create({
       wrapper: "#scroll",
       content: "#content",
-      smooth: 3,
+      smooth: 2,
       // smoothTouch: true,
       // effects: true,
-      // normalizeScroll: true
+      normalizeScroll: true
    })
    if (MIN1024.matches) {
       smoother.paused(true);
