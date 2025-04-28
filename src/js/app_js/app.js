@@ -52,13 +52,17 @@ function throttle(callee, timeout) {
 window.addEventListener('resize', () => {
    //  addHeightVariable();
    closeHeaderMenu();
-   initCloseModal("mobile-menu");
+   if (MIN1024.matches) {
+      initCloseModal("mobile-menu")
+   }
 })
 
 
 // ** ======================= CLICK ======================  ** //
 document.documentElement.addEventListener("click", (event) => {
-   if (event.target.closest('.open-menu')) { openHeaderMenu() }
+   if (event.target.closest('.open-menu')) {
+      openHeaderMenu()
+   }
 })
 
 function openHeaderMenu() {
