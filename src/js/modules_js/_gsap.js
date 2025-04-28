@@ -1,12 +1,13 @@
 "use strict"
+var smoother;
 window.addEventListener("load", (event) => {
    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother)
 
-   ScrollTrigger.config({ ignoreMobileResize: true });
-   ScrollTrigger.isTouch && ScrollTrigger.normalizeScroll({ allowNestedScroll: true });
+   // ScrollTrigger.config({ ignoreMobileResize: true });
+   // ScrollTrigger.isTouch && ScrollTrigger.normalizeScroll({ allowNestedScroll: true });
 
    if (MIN1024.matches) {
-      const smoother = ScrollSmoother.create({
+      smoother = ScrollSmoother.create({
          wrapper: "#scroll",
          content: "#content",
          smooth: 2,

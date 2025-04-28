@@ -43,11 +43,13 @@ function initCloseModal(id) {
 function initOpenModal(id) {
    if (document.querySelector(`#${id}`)) {
       document.querySelector(`#${id}`).classList.add('js-modal-visible');
-      document.body.classList.add('body-overflow')
+      document.body.classList.add('body-overflow');
+      if (MIN1024.matches) smoother.paused(true);
    }
 }
 function activeScrollCloseModal() {
    if (!document.querySelector('.js-modal-visible')) {
       document.body.classList.remove('body-overflow');
+      if (MIN1024.matches) smoother.paused(false);
    }
 }

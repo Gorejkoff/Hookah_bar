@@ -128,14 +128,15 @@ function moving(e, order, addressMove) {
 
 
 "use strict"
+var smoother;
 window.addEventListener("load", (event) => {
    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother)
 
-   ScrollTrigger.config({ ignoreMobileResize: true });
-   ScrollTrigger.isTouch && ScrollTrigger.normalizeScroll({ allowNestedScroll: true });
+   // ScrollTrigger.config({ ignoreMobileResize: true });
+   // ScrollTrigger.isTouch && ScrollTrigger.normalizeScroll({ allowNestedScroll: true });
 
    if (MIN1024.matches) {
-      const smoother = ScrollSmoother.create({
+      smoother = ScrollSmoother.create({
          wrapper: "#scroll",
          content: "#content",
          smooth: 2,
@@ -269,12 +270,14 @@ function initCloseModal(id) {
 function initOpenModal(id) {
    if (document.querySelector(`#${id}`)) {
       document.querySelector(`#${id}`).classList.add('js-modal-visible');
-      document.body.classList.add('body-overflow')
+      document.body.classList.add('body-overflow');
+      if (MIN1024.matches) smoother.paused(true);
    }
 }
 function activeScrollCloseModal() {
    if (!document.querySelector('.js-modal-visible')) {
       document.body.classList.remove('body-overflow');
+      if (MIN1024.matches) smoother.paused(false);
    }
 }
 

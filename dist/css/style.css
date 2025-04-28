@@ -732,6 +732,10 @@ body {
   z-index: 21;
 }
 
+.body-overflow {
+  overflow: hidden !important;
+}
+
 .first-screen {
   position: relative;
   min-height: 115vw;
