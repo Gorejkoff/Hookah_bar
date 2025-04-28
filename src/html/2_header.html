@@ -1,11 +1,8 @@
 <header id="header" class="header">
    <div class="header__container">
       <nav class="header__nav">
-         <div class="header__flank">
-            <ol>
-               <li><a href="#0">Меню</a></li>
-               <li><a href="#0">Меню</a></li>
-            </ol>
+         <div class="header__flank header-adaptiv-left">
+
          </div>
          <div class="header__logo">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,14 +30,13 @@
                </g>
             </svg>
          </div>
-         <div class="header__flank">
-            <ol>
-               <li><a href="#0">Контакты</a></li>
+         <div class="header__flank  header-adaptiv-right">
+            <ol data-da=".header-adaptiv-right,0,1024">
                <li class="header__telegram"></li>
             </ol>
          </div>
 
-         <button type="button" class="header__buttom-menu">
+         <button type="button" class="header__button-menu js-modal-open" data-modal_open="mobile-menu">
             <svg width="64" height="14" viewBox="0 0 64 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M0 1H64" stroke="white" />
                <path d="M0 13.5H64" stroke="white" />

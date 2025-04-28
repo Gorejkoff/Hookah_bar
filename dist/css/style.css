@@ -507,6 +507,7 @@ body {
 
 .modal__body {
   padding-top: 19px;
+  padding-bottom: 28px;
   position: relative;
   margin: 0 auto;
   display: -webkit-box;
@@ -645,7 +646,6 @@ body {
 .modal__nav {
   position: relative;
   z-index: 2;
-  padding-bottom: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -657,6 +657,64 @@ body {
           justify-content: center;
   gap: 36px;
   height: 44vw;
+}
+
+.modal__mobile {
+  position: relative;
+  z-index: 2;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+
+.modal__mobile-list ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.modal__mobile-list li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal__mobile-list li a {
+  font-size: 28px;
+}
+
+.modal__mobile-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 28px;
 }
 
 .js-modal-hidden {
@@ -1182,7 +1240,7 @@ body {
             animation: around 1s 1s forwards;
   }
 
-  .header__buttom-menu {
+  .header__button-menu {
     display: none;
   }
 

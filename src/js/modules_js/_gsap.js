@@ -5,15 +5,15 @@ window.addEventListener("load", (event) => {
    ScrollTrigger.config({ ignoreMobileResize: true });
    ScrollTrigger.isTouch && ScrollTrigger.normalizeScroll({ allowNestedScroll: true });
 
-   const smoother = ScrollSmoother.create({
-      wrapper: "#scroll",
-      content: "#content",
-      smooth: 2,
-      // smoothTouch: true,
-      // effects: true,
-      normalizeScroll: true
-   })
    if (MIN1024.matches) {
+      const smoother = ScrollSmoother.create({
+         wrapper: "#scroll",
+         content: "#content",
+         smooth: 2,
+         normalizeScroll: true,
+         // smoothTouch: true,
+         // effects: true,
+      })
       smoother.paused(true);
       setTimeout(() => { smoother.paused(false) }, 5000);
    }

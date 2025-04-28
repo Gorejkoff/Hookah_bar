@@ -52,6 +52,7 @@ function throttle(callee, timeout) {
 window.addEventListener('resize', () => {
    //  addHeightVariable();
    closeHeaderMenu();
+   initCloseModal("mobile-menu");
 })
 
 
