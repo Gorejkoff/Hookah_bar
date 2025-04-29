@@ -91,6 +91,19 @@ window.addEventListener("load", (event) => {
 
    tl_4.fromTo(".about__swiper", { x: "-20%" }, { x: 0 });
 
+
+
+   document.body.addEventListener('click', (event) => {
+      if (event.target.closest('[href^="#"]')) {
+         event.preventDefault();
+         initCloseModal("mobile-menu");
+         let getName = event.target.closest('[href^="#"]').getAttribute('href');
+         gsap.to(window, { scrollTo: getName, ease: "power2" });
+      }
+   })
+
+
+
 });
 
 
