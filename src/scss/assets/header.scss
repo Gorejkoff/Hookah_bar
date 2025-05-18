@@ -92,6 +92,9 @@
    }
 
    &__button-menu {
+      opacity: 0;
+      animation: button-menu 1s 3s forwards;
+
       @media (min-width:1024px) {
          display: none;
       }
@@ -102,6 +105,15 @@
    }
 }
 
+@keyframes button-menu {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
 
 @keyframes logo {
    0% {

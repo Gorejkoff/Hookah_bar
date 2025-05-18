@@ -389,8 +389,34 @@ body {
           animation: around 1s 1s forwards;
 }
 
+.header__button-menu {
+  opacity: 0;
+  -webkit-animation: button-menu 1s 3s forwards;
+          animation: button-menu 1s 3s forwards;
+}
+
 .header__telegram {
   min-width: 29px;
+}
+
+@-webkit-keyframes button-menu {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes button-menu {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes logo {
